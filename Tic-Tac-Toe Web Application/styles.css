@@ -1,58 +1,64 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
 }
-
-.container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+h1 {
+  margin: 20px 0;
 }
-
-#game-board {
+.board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 100px);
   gap: 5px;
-  margin: 20px auto;
-  width: 300px;
-  height: 300px;
-}
-
-.cell {
-  display: flex;
   justify-content: center;
+  margin: 20px auto;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  display: flex;
   align-items: center;
-  border: 1px solid #333;
-  font-size: 2rem;
+  justify-content: center;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  background-color: #f4f4f4;
 }
-
-.cell:hover {
-  background-color: #eaeaea;
-}
-
 .cell.taken {
   pointer-events: none;
 }
-
-#winner {
-  color: green;
-  font-weight: bold;
+.status {
+  margin: 20px;
+  font-size: 18px;
 }
-
-#draw {
-  color: orange;
-}
-
-button {
+.restart {
+  margin-top: 20px;
   padding: 10px 20px;
-  font-size: 1rem;
-  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+}
+.restart:hover {
+  background-color: #0056b3;
+}
+.mode {
+  margin: 20px;
+  font-size: 18px;
+}
+.mode button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.mode button:hover {
+  background-color: #218838;
 }
